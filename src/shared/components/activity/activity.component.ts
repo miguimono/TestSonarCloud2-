@@ -96,6 +96,79 @@ export class ActivityComponent implements OnInit, OnDestroy {
     }
     return resultText;
   }
+    generateDescription2(prefix: string, suffix: string, namesArray: Array<ActivityInfo>, unknownCount) {
+    let resultText = prefix;
+    resultText += namesArray.map(activityInfo => activityInfo.forename + ' ' + activityInfo.surname).join(', ');
+    if (unknownCount > 0) {
+      resultText += (namesArray.length > 0 ? ' and ' + unknownCount + ' other' : unknownCount + ' user');
+      resultText += ( unknownCount > 1 ? 's' : '');
+    } else {
+      resultText = this.replaceLastCommaWithAnd(resultText);
+    }
+    if (suffix.length > 0) {
+      if (namesArray.length + unknownCount > 1) {
+        resultText += ' are ' + suffix;
+      } else {
+        resultText += ' is ' + suffix;
+      }
+    }
+    return resultText;
+  }
+  generateDescription3(prefix: string, suffix: string, namesArray: Array<ActivityInfo>, unknownCount) {
+    let resultText = prefix;
+    resultText += namesArray.map(activityInfo => activityInfo.forename + ' ' + activityInfo.surname).join(', ');
+    if (unknownCount > 0) {
+      resultText += (namesArray.length > 0 ? ' and ' + unknownCount + ' other' : unknownCount + ' user');
+      resultText += ( unknownCount > 1 ? 's' : '');
+    } else {
+      resultText = this.replaceLastCommaWithAnd(resultText);
+    }
+    if (suffix.length > 0) {
+      if (namesArray.length + unknownCount > 1) {
+        resultText += ' are ' + suffix;
+      } else {
+        resultText += ' is ' + suffix;
+      }
+    }
+    return resultText;
+  }
+  generateDescription4(prefix: string, suffix: string, namesArray: Array<ActivityInfo>, unknownCount) {
+    let resultText = prefix;
+    resultText += namesArray.map(activityInfo => activityInfo.forename + ' ' + activityInfo.surname).join(', ');
+    if (unknownCount > 0) {
+      resultText += (namesArray.length > 0 ? ' and ' + unknownCount + ' other' : unknownCount + ' user');
+      resultText += ( unknownCount > 1 ? 's' : '');
+    } else {
+      resultText = this.replaceLastCommaWithAnd(resultText);
+    }
+    if (suffix.length > 0) {
+      if (namesArray.length + unknownCount > 1) {
+        resultText += ' are ' + suffix;
+      } else {
+        resultText += ' is ' + suffix;
+      }
+    }
+    return resultText;
+  }
+  generateDescription5(prefix: string, suffix: string, namesArray: Array<ActivityInfo>, unknownCount) {
+    let resultText = prefix;
+    resultText += namesArray.map(activityInfo => activityInfo.forename + ' ' + activityInfo.surname).join(', ');
+    if (unknownCount > 0) {
+      resultText += (namesArray.length > 0 ? ' and ' + unknownCount + ' other' : unknownCount + ' user');
+      resultText += ( unknownCount > 1 ? 's' : '');
+    } else {
+      resultText = this.replaceLastCommaWithAnd(resultText);
+    }
+    if (suffix.length > 0) {
+      if (namesArray.length + unknownCount > 1) {
+        resultText += ' are ' + suffix;
+      } else {
+        resultText += ' is ' + suffix;
+      }
+    }
+    return resultText;
+  }
+
 
   private replaceLastCommaWithAnd(str: String) {
     return str.replace(/(.*)\,(.*?)$/, '$1 and$2');
